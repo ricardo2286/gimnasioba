@@ -1,0 +1,24 @@
+{% extends "AppGimnasio/padre.html" %}
+{% load static %}
+{% block contenido2 %}
+<li class="sidebar-brand"><a href="#page-top">MUSCULACION menu</a></li>
+{% endblock %} 
+
+{% block contenido1 %}
+
+</nav>
+<!-- Header-->
+<header class="masthead d-flex align-items-center">
+    <div class="container px-4 px-lg-5 text-center">
+        <h1 class="mb-1">GIMNASIO BS AS</h1>
+        <h3 class="mb-5"><em>MUSCULACION</em></h3>
+        <h3 class="mb-5"><em>Prof: LIONEL </em></h3>
+        
+        <form action="/AppGimnasio/musculacionformulario" method="post">{% csrf_token %}
+            <p>NOMBRE: <input type="text" name="nombre"> </p>
+            <p>APELLIDO: <input type="text" name="apellido"> </p>
+            <input type="submit" value="ENVIAR" >
+        </form>
+    </div>
+    
+{% endblock %}
